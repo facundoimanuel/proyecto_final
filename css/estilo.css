@@ -1,56 +1,98 @@
-::selection {
-  background: #FFED00;
-  color: black; }
-
 body, html {
   margin: 0;
-  height: 100%; }
+  height: 100%;
+  scroll-behavior: smooth; }
 
 body {
   display: grid;
   height: 100vh;
-  font-family: "Averia Serif Libre", cursive;
+  font-family: "Syne Mono", monospace;
   font-size: 1rem;
-  background: url(../img/bg-img.jpg);
-  background-size: cover;
-  background-attachment: fixed; }
+  background: whitesmoke; }
 
 @media only screen and (max-width: 768px) {
-  p {
-    font-size: 14px;
-    color: #161616; }
-  h1, .aboutus {
-    color: #FFED00; }
   .icons {
     visibility: hidden; }
-  .rug .rug__img {
-    width: 300px;
-    height: 300px; }
   .rights p {
-    font-size: 10px !important; } }
+    font-size: 10px !important; }
+  .bg {
+    display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .up-btn {
+    display: none; } }
+
+.bg {
+  position: fixed;
+  z-index: -1; }
+  .bg__vid {
+    width: 100vw;
+    height: 100vh;
+    filter: invert(1); }
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  z-index: 10;
+  filter: invert(1) drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.292)); }
+  .titulo a img:hover {
+    filter: drop-shadow(0px 10px 5px rgba(255, 255, 255, 0.245)); }
+
+.face {
+  display: flex;
+  justify-self: center;
+  margin-bottom: 100px;
+  margin-top: -50px;
+  filter: invert(1) drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.258)); }
 
 .navbar {
-  background-color: #161616; }
+  background: hidden; }
   .navbar__text {
     font-weight: bolder;
-    color: #FFED00; }
-  .navbar__text:hover {
-    color: white; }
+    color: #202020; }
+    .navbar__text--shop:hover {
+      color: #e9ca1b; }
+    .navbar__text--style:hover {
+      color: #9462ff; }
+    .navbar__text--faqs:hover {
+      color: #6cda6c; }
+    .navbar__text--contact:hover {
+      color: #ff6161; }
   .navbar__toggler {
-    color: #FFED00; }
-
-.carousel-control-prev, .carousel-control-next {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.197);
-  top: calc(50% - 35px);
-  margin: 25px; }
+    color: #202020; }
 
 .textoDiv {
   font-weight: bolder;
   text-align: center; }
   .textoDiv--animation {
+    animation-name: textoDiv;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    animation-duration: 2s;
+    animation-delay: 0s; }
+
+@keyframes textoDiv {
+  0% {
+    background-color: #e9ca1b;
+    color: #202020; }
+  25% {
+    background-color: #202020;
+    color: #e9ca1b; }
+  50% {
+    background-color: #e9ca1b;
+    color: #202020; }
+  75% {
+    background-color: #202020;
+    color: #e9ca1b; }
+  100% {
+    background-color: #e9ca1b;
+    color: #202020; } }
+
+.textoDiv1 {
+  font-weight: bolder;
+  text-align: center; }
+  .textoDiv1--animation {
     animation-name: textoDiv1;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -59,43 +101,64 @@ body {
 
 @keyframes textoDiv1 {
   0% {
-    background-color: #FFED00;
-    color: #161616; }
+    background-color: #9462ff;
+    color: #202020; }
   25% {
-    background-color: #161616;
-    color: #FFED00; }
+    background-color: #202020;
+    color: #9462ff; }
   50% {
-    background-color: #FFED00;
-    color: #161616; }
+    background-color: #9462ff;
+    color: #202020; }
   75% {
-    background-color: #161616;
-    color: #FFED00; }
+    background-color: #202020;
+    color: #9462ff; }
   100% {
-    background-color: #FFED00;
-    color: #161616; } }
+    background-color: #9462ff;
+    color: #202020; } }
+
+.up-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  z-index: 10; }
+  .up-btn__color {
+    color: #e9ca1b;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.142)); }
+    .up-btn__color:hover {
+      filter: drop-shadow(0px 2px 5px rgba(255, 255, 255, 0.442)); }
 
 .news {
   display: block;
-  margin-top: 100px; }
+  margin: 100px 0 30px 30px;
+  right: auto; }
   .news__text {
-    display: flex;
-    justify-content: center; }
-  .news__email {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px; }
-    .news__email input {
-      width: 300px; }
-    .news__email button {
-      margin: 0 10px;
-      border: none;
-      width: 70px; }
-      .news__email button:hover {
-        background-color: #FFED00; }
+    display: block; }
+    .news__text p {
+      animation: type 10s steps(45) infinite;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid #202020; }
+
+@keyframes type {
+  0% {
+    width: 0ch; }
+  50% {
+    width: 42ch; }
+  75% {
+    width: 42ch; }
+  100% {
+    width: 0ch; } }
+  .news input {
+    width: 300px; }
+  .news button {
+    margin: 0 10px;
+    border: none;
+    width: 70px; }
+    .news button:hover {
+      background-color: #e9ca1b; }
 
 .footer {
-  background-color: #161616;
+  background-color: #202020;
   display: block;
   justify-content: center;
   align-items: center; }
@@ -108,7 +171,7 @@ body {
   .footer__texto {
     display: flex;
     justify-content: center;
-    font-family: "Averia Serif Libre", cursive;
+    font-family: "Syne Mono", monospace;
     color: whitesmoke;
     font-size: 12px;
     text-align: center;
@@ -135,18 +198,20 @@ body {
   .footer .fa-envelope-open-text:hover {
     color: #a5a5a5; }
 
-main {
-  text-align: center;
-  margin: 100px; }
+.col-sm {
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.19)); }
+  .col-sm:hover {
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5)); }
 
-h1 {
-  font-family: "Averia Serif Libre", cursive;
-  text-align: center; }
+.text-muted span {
+  color: whitesmoke;
+  background: red; }
 
 .product {
   display: block;
   justify-self: center; }
   .product__zoom {
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.19));
     display: flex;
     justify-content: center;
     width: 400px;
@@ -162,13 +227,13 @@ h1 {
     height: auto; }
   .product__text p {
     font-size: 20px;
-    font-family: "Averia Serif Libre", cursive;
+    font-family: "Syne Mono", monospace;
     display: flex;
     justify-content: center; }
   .product__descr {
     margin-top: 40px; }
   .product__buy-btn {
-    font-family: "Averia Serif Libre", cursive;
+    font-family: "Syne Mono", monospace;
     display: flex;
     justify-content: center; }
     .product__buy-btn button {
@@ -177,7 +242,7 @@ h1 {
       padding: 0 30px;
       font-family: 'Helvetica Neue', sans-serif; }
       .product__buy-btn button:hover {
-        background-color: #FFED00; }
+        background-color: #e9ca1b; }
 
 .rights {
   margin: 50px;
@@ -187,13 +252,30 @@ h1 {
   text-decoration: underline;
   font-size: 10px; }
 
-.style {
-  display: flex;
-  flex-flow: column;
-  align-items: center; }
-  .style__Img {
-    margin: 70px 0; }
+.faqs {
+  border: 1px solid #202020;
+  background-color: whitesmoke;
+  padding: 50px;
+  display: grid;
+  margin: 50px; }
+  .faqs__tittle {
+    font-weight: bolder;
+    margin-bottom: 50px;
+    font-size: 20px; }
+  .faqs__text {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: auto;
+    grid-gap: 12px; }
+  .faqs .text-tittle {
+    font-style: italic;
+    font-weight: bolder; }
 
-.aboutus {
-  font-family: 'Libre Barcode 39 Text', cursive;
-  text-align: center; }
+.contact {
+  border: 1px solid #202020;
+  background-color: whitesmoke;
+  margin: 50px;
+  padding: 50px; }
+  .contact__tittle {
+    font-weight: bolder;
+    font-size: 20px; }
