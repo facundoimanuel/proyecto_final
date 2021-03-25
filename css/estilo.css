@@ -8,7 +8,7 @@ body {
   height: 100vh;
   font-family: "Syne Mono", monospace;
   font-size: 1rem;
-  background: url(../img/_butterfly.gif);
+  background: url(../img/tenor.gif);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -20,8 +20,8 @@ body {
 @media only screen and (max-width: 768px) {
   .rights p {
     font-size: 10px !important; }
-  .indexLogo {
-    visibility: hidden; }
+  nav a img {
+    width: 70px; }
   .titulo a img {
     width: 300px; }
   .face img {

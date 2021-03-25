@@ -19,13 +19,12 @@ body{
     height: 100vh;
     font-family: $fotn_brand;
     font-size: 1rem;
-    background: url(../img/_butterfly.gif);
+    background: url(../img/tenor.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
-
 
 
 
@@ -45,8 +44,8 @@ body{
 
 
 //for index
-    .indexLogo{
-        visibility: hidden;
+    nav a img{
+        width: 70px;
     }
     .titulo a img{
         width: 300px;  
