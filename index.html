@@ -13,6 +13,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+
     <link rel="stylesheet" href="css/estilo.css">
 
     <!--font-->
@@ -20,18 +24,54 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 
+<!-- 
+========================================================================================================================================
+  
+
+   .dMMMb  dMMMMMP dMP     dMMMMMP    .aMMMb  .aMMMb  dMMMMb  dMMMMMP 
+  dMP" VP dMP     dMP     dMP        dMP"VMP dMP"dMP dMP.dMP dMP      
+  VMMMb  dMMMP   dMP     dMMMP      dMP     dMMMMMP dMMMMK" dMMMP     
+dP .dMP dMP     dMP     dMP        dMP.aMP dMP dMP dMP"AMF dMP        
+VMMMP" dMMMMMP dMMMMMP dMP         VMMMP" dMP dMP dMP dMP dMMMMMP     
+                                                                                      
+
+	by 𝖋𝖆𝖈𝖚𝖓𝖉𝖔𝖎𝖒𝖆𝖓𝖚𝖊𝖑
+                               
+========================================================================================================================================   
+-->    
 
   </head>
 <body>
 
-   <!--bg-->  
-    <main class="bg">
-      <img src="img/giphy.gif" alt="gif" class="bg__vid">
-    </main>
 
-    <div class="textoDiv">
-        <p class="textoDiv--animation"> &#x270C; &#x1F607; SELF CARE WORLDWIDE SHOP AVAILABLE NOW &#x1F920; &#x1F498;</p>
-    </div>
+       <!--navbar-->
+       <nav class="navbar navbar-expand-md navbar">
+        <a href="index.html" class="navbar-brand indexLogo"><img src="img/titulo.png" alt="logotipo" width= 90px></a>
+
+        <button class="navbar-toggler fas fa-bars navbar__toggler" data-toggle="collapse" data-target="#navbarMenu" id="toggler"></button>    
+
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link navbar__text navbar__text--hov" style="color: rgb(255, 50, 50);">home</a>
+              </li>
+              <li class="nav-item">
+                <a href="shop.html" class="nav-link navbar__text navbar__text--hov">shop</a>
+              </li>
+              <li class="nav-item">
+                <a href="exclusive.html" class="nav-link navbar__text navbar__text--hov">exclusives</a>
+              </li>
+              <li class="nav-item">
+                <a href="faqs.html" class="nav-link navbar__text navbar__text--hov">faqs</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link navbar__text navbar__text--hov">contact</a>
+              </li>
+            </ul>
+          </div>     
+      </nav>
+
+
 
     
     <div class="titulo">
@@ -39,7 +79,7 @@
     </div>
 
     <div class="face">
-        <img src="img/face.png" width="400px" alt="">
+        <img src="img/face.png" width="400px" height="400px" alt="smileyface">
     </div>
 
 
@@ -74,19 +114,11 @@
           </div>    
     </footer>
 
-    <!--script>
-        var eyes = document.getElementsByClassName("eye");
-        document.onmousemove = function(){
-            var x = event.clientX * 100 / window.innerWidth + "%";
-            var y = event.clientY * 100 / window.innerHeight + "%";
 
-            for(var i=0;i<2;i++){
-                eyes[i].style.left = x;
-                eyes[i].style.top = y;
-                eyes[i].style.transform = "translate(-"+x+",-"+y+")";
-            }
-        }
-    </script-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  
 
     <!--fontawesomeJS-->
     <script src="https://kit.fontawesome.com/a8f39fb9fc.js" crossorigin="anonymous"></script>  
